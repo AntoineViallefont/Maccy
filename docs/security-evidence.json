@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T07:58:43.247458+02:00",
+  "generated_at": "2026-10-20T08:00:58.880148+02:00",
   "purpose": "Traceability; not a malware scan, certification, or absence-of-vulnerability claim",
   "upstream_repository": "https://github.com/p0deje/Maccy.git",
   "upstream_baseline_commit": "c700182f638d9d29bfa0aec9dc560422698854c6",
@@ -689,7 +689,7 @@
     },
     {
       "path": "Scripts/build.sh",
-      "sha256": "8d93493e76551e30d4ee8fee39cd5b86bb055e3ce09b6f541ffe570d502a9c43"
+      "sha256": "0e12a21c6456e84be4fb435a9a68ba61773024753ca95b6fe565e382c3747211"
     },
     {
       "path": "Scripts/generate-icons.swift",
