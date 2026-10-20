@@ -9,11 +9,12 @@
   "release": {
     "build_succeeded": true,
     "adhoc_runtime_signature_verified": true,
-    "executable_sha256": "84bba09ce1827bb6265bd879df3c1afbb5388343ffa98027e931902765d4112a",
+    "executable_sha256": "8d172811b89cbbc147ef30a86f9a35b833601d49b8b09ab6cf80264efd11ac1e",
     "installed_path": "/Users/macavi/Applications/SecurePaste.app",
     "latest_UI_name_verified": "SecurePaste",
     "latest_installed_settings_verified": true,
-    "latest_installed_accessibility_authorized": false
+    "latest_installed_accessibility_authorized": false,
+    "build_number": 63
   },
   "manual_AX_tests": {
     "scope": "Pre-rename Release build; physical keyboard operated by Antoine; UI inspected by agent",
@@ -53,6 +54,10 @@
     "installed_signature_verified": true,
     "effective_CFBundleIconName": "SecurePasteIcon",
     "security_logic_changed": false,
-    "automated_security_tests_rerun_for_icon_only_change": false
+    "automated_security_tests_rerun_for_icon_only_change": false,
+    "fresh_installed_bundle_verified": true,
+    "runtime_application_icon_explicit": true,
+    "about_panel_visually_verified": true,
+    "verified_build_number": 63
   }
 }

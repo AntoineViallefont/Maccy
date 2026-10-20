@@ -50,6 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationWillFinishLaunching(_ notification: Notification) { // swiftlint:disable:this function_body_length
+    // Use the fork's icon explicitly, even when Launch Services retains an older cached icon.
+    if let url = Bundle.main.url(forResource: "SecurePasteIcon", withExtension: "icns"),
+       let icon = NSImage(contentsOf: url) {
+      NSApp.applicationIconImage = icon
+    }
     #if DEBUG
     if Self.isTesting {
       // Start from a clean slate for the isolated testing preferences.
