@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T07:45:17.747139+02:00",
+  "generated_at": "2026-10-20T07:50:32.530024+02:00",
   "purpose": "Traceability; not a malware scan, certification, or absence-of-vulnerability claim",
   "upstream_repository": "https://github.com/p0deje/Maccy.git",
   "upstream_baseline_commit": "c700182f638d9d29bfa0aec9dc560422698854c6",
@@ -333,7 +333,7 @@
     },
     {
       "path": "Maccy/MenuIcon.swift",
-      "sha256": "bdb98812bf8e720da7feaba083d701a81bb9f3822b380c4d474f5abdb08958c8"
+      "sha256": "4eec1e6b2bde5ad3750f555ecd9c349c75e51544cda90a0cb4a26cd6cd62a46d"
     },
     {
       "path": "Maccy/Models/HistoryItem.swift",
@@ -613,7 +613,7 @@
     },
     {
       "path": "Maccy.xcodeproj/project.pbxproj",
-      "sha256": "258278bbf52ffba28ec5e27b973eece9e43f451c32b35e48703e99ba902eb825"
+      "sha256": "9613655a38d3bf42786f50d2d2efade91a672b8ea08a021a24753486bee975a9"
     },
     {
       "path": "Maccy.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved",
@@ -698,6 +698,10 @@
     {
       "path": "Scripts/build.sh",
       "sha256": "afcac2e00cf1b7866f827d51e14a32a2ccbcda9643b4016d6ba0ec9a81db6733"
+    },
+    {
+      "path": "Scripts/generate-icons.swift",
+      "sha256": "cd37122686ba6be84c1869eb7848367a02d3b9fc7d0fb6abd7e52bdb2351e6fb"
     },
     {
       "path": "Scripts/security_inventory.py",

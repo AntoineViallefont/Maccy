@@ -2,6 +2,14 @@
 
 L’application construite et son exécutable portent le nom **SecurePaste**. Le nom du module et de la cible Xcode reste `Maccy` pour limiter les modifications du socle ; ce nom technique n’est pas le nom affiché à l’utilisateur. Les crédits du logiciel d’origine sont conservés.
 
+## Identité visuelle
+
+Icône A validée par Antoine : cadenas blanc sur fond bleu, avec une silhouette de cadenas dans la barre des menus. Les dix tailles macOS sont générées sans dépendance externe. Pour les régénérer :
+
+```sh
+swift Scripts/generate-icons.swift
+```
+
 ## Fonctionnement implémenté
 
 - Maccy classique hors des applications de la liste ; historique conservé pour les copies ordinaires.

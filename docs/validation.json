@@ -9,7 +9,7 @@
   "release": {
     "build_succeeded": true,
     "adhoc_runtime_signature_verified": true,
-    "executable_sha256": "282a1e5e8e3ec7c1a4fe5689cf328044e7fb7fdd72243171de0df62219181da7",
+    "executable_sha256": "84bba09ce1827bb6265bd879df3c1afbb5388343ffa98027e931902765d4112a",
     "installed_path": "/Users/macavi/Applications/SecurePaste.app",
     "latest_UI_name_verified": "SecurePaste",
     "latest_installed_settings_verified": true,
@@ -44,5 +44,15 @@
     "Xcode": "27.1 (27A9275)",
     "macOS": "27.0.1",
     "architecture": "arm64"
+  },
+  "icon_update": {
+    "approved_design": "A — Cadenas bleu",
+    "macOS_sizes_generated": 10,
+    "menubar_vector_padlock": true,
+    "build_succeeded": true,
+    "installed_signature_verified": true,
+    "effective_CFBundleIconName": "SecurePasteIcon",
+    "security_logic_changed": false,
+    "automated_security_tests_rerun_for_icon_only_change": false
   }
 }
