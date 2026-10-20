@@ -130,6 +130,13 @@ class AppState: Sendable {
       settingsWindowController = SettingsWindowController(
         panes: [
           Settings.Pane(
+            identifier: Settings.PaneIdentifier("securePaste"),
+            title: "SecurePaste",
+            toolbarIcon: NSImage(systemSymbolName: "lock.shield", accessibilityDescription: nil)!
+          ) {
+            SecurePasteSettingsView()
+          },
+          Settings.Pane(
             identifier: Settings.PaneIdentifier.general,
             title: generalTitle,
             toolbarIcon: NSImage.gearshape!

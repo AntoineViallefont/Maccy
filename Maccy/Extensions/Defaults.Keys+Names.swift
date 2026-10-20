@@ -24,6 +24,7 @@ nonisolated extension Defaults.Keys {
   nonisolated(unsafe) private static let preferencesSuite: UserDefaults = .standard
 #endif
 
+  static let secureApplications = Key<[String]>("secureApplications", default: [], suite: preferencesSuite)
   static let clearOnQuit = Key<Bool>("clearOnQuit", default: false, suite: preferencesSuite)
   static let clearSystemClipboard = Key<Bool>("clearSystemClipboard", default: false, suite: preferencesSuite)
   static let clipboardCheckInterval = Key<Double>("clipboardCheckInterval", default: 0.5, suite: preferencesSuite)

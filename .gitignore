@@ -1,5 +1,7 @@
 xcuserdata/
-Maccy.xcodeproj/project.xcworkspace/xcshareddata
+.build/
+Packages/*/.build/
+
 .idea
 .DS_Store
 Maccy/.DS_Store

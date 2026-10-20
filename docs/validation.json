@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Europe/Paris",
+  "automated_tests": {
+    "secure_module_passed": 10,
+    "Maccy_selected_passed": 18,
+    "full_Maccy_suite_run": false
+  },
+  "release": {
+    "build_succeeded": true,
+    "adhoc_runtime_signature_verified": true,
+    "executable_sha256": "282a1e5e8e3ec7c1a4fe5689cf328044e7fb7fdd72243171de0df62219181da7",
+    "installed_path": "/Users/macavi/Applications/SecurePaste.app"
+  },
+  "manual_AX_tests": {
+    "scope": "Pre-rename Release build; physical keyboard operated by Antoine; UI inspected by agent",
+    "build_sha256": "562a27d17aad9c0fb69f01f075727263d0b261b58eafcbc58c6eec66960cc4dc",
+    "manual_capture_confirmed_by_user": true,
+    "red_icon_confirmed_by_user": true,
+    "insertion_and_single_use_confirmed_by_user": true,
+    "secure_insertion_in_listed_TextEdit_reported_by_user": true,
+    "test_text_observed_in_destination": true,
+    "classic_witness_observed_preserved": true,
+    "test_secret_count_in_local_history_titles": 0,
+    "test_secret_count_in_local_history_payloads": 0,
+    "temporary_TextEdit_list_entry_removed": true
+  },
+  "pending": [
+    "Final green signal visual check",
+    "Latest renamed build physical keyboard recheck",
+    "Application compatibility beyond TextEdit",
+    "Light/dark menubar icon validation",
+    "Actual permission withdrawal and tap interruption scenarios"
+  ],
+  "logs_sha256": {
+    "tests": "bcf56e4a756bd7fb2401ef573b1de14a170aa0b0cbb2eeae003facb0c0944bdd",
+    "release": "da2c07db7ec277854e4182da95986b26ad3150d43a517268303587c7b17e9800"
+  },
+  "environment": {
+    "Xcode": "27.1 (27A9275)",
+    "macOS": "27.0.1",
+    "architecture": "arm64"
+  }
+}

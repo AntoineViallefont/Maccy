@@ -41,6 +41,14 @@ class Clipboard {
 
   init() {
     changeCount = pasteboard.changeCount
+
+    // Defense in depth for menu/context-menu copies that bypass the key filter.
+    // This does NOT remove the content from the system clipboard.
+    if let identifier = sourceApp?.bundleIdentifier,
+       Defaults[.secureApplications].contains(identifier) {
+      AppState.shared.history.interruptPasteStack()
+      return
+    }
   }
 
   func onNewCopy(_ hook: @escaping OnNewCopyHook) {

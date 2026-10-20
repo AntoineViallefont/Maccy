@@ -14,11 +14,13 @@ class About {
   }
 
   private var links: NSMutableAttributedString {
-    let string = NSMutableAttributedString(string: "Website│GitHub│Support",
+    let string = NSMutableAttributedString(string: "SecurePaste — fork de Maccy\nGitHub SecurePaste · Projet Maccy",
                                            attributes: [NSAttributedString.Key.foregroundColor: NSColor.labelColor])
-    string.addAttribute(.link, value: "https://maccy.app", range: NSRange(location: 0, length: 7))
-    string.addAttribute(.link, value: "https://github.com/p0deje/Maccy", range: NSRange(location: 8, length: 6))
-    string.addAttribute(.link, value: "mailto:support@maccy.app", range: NSRange(location: 15, length: 7))
+    let text = string.string as NSString
+    string.addAttribute(.link, value: "https://github.com/AntoineViallefont/Maccy",
+                        range: text.range(of: "GitHub SecurePaste"))
+    string.addAttribute(.link, value: "https://github.com/p0deje/Maccy",
+                        range: text.range(of: "Projet Maccy"))
     return string
   }
 

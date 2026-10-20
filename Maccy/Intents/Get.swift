@@ -45,8 +45,9 @@ struct Get: AppIntent, CustomIntentMigratedAppIntent {
       if selected {
         item = AppState.shared.navigator.selection.first?.item
       } else {
+        guard number >= positionOffset else { throw AppIntentError.notFound }
         let index = number - positionOffset
-        if AppState.shared.history.items.count >= index {
+        if AppState.shared.history.items.indices.contains(index) {
           item = AppState.shared.history.items[index].item
         }
       }

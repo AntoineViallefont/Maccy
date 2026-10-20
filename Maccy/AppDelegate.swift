@@ -1,6 +1,7 @@
 import Defaults
 import KeyboardShortcuts
-import Sparkle
+import SecurePasteKit
+import Sauce
 import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     statusItem.button?.image = Defaults[.menuIcon].image
     statusItem.button?.imagePosition = .imageLeft
     statusItem.button?.target = self
+    statusItem.button?.sendAction(on: [.leftMouseUp, .rightMouseUp])
     return statusItem
   }()
 
@@ -26,6 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     if isStatusItemDisabled {
       accessibilityLabel += " — \(NSLocalizedString("status_item_disabled_accessibility_suffix", comment: ""))"
     }
+    if SecurePasteService.shared.showsRedIcon { accessibilityLabel += " — Mode sécurisé" }
+    if SecurePasteService.shared.showsGreenConfirmation {
+      accessibilityLabel += " — Insertion réussie, secret détruit"
+    }
     statusItem.button?.setAccessibilityLabel(accessibilityLabel)
   }
 
@@ -35,14 +41,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   private var statusItemVisibilityObserver: NSKeyValueObservation?
 
+  private var isAutomatedTest: Bool {
+    #if DEBUG
+    return Self.isTesting || ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+    #else
+    return false
+    #endif
+  }
+
   func applicationWillFinishLaunching(_ notification: Notification) { // swiftlint:disable:this function_body_length
     #if DEBUG
     if Self.isTesting {
-      SPUUpdater(hostBundle: Bundle.main,
-                 applicationBundle: Bundle.main,
-                 userDriver: SPUStandardUserDriver(hostBundle: Bundle.main, delegate: nil),
-                 delegate: nil)
-      .automaticallyChecksForUpdates = false
       // Start from a clean slate for the isolated testing preferences.
       UserDefaults.standard.removePersistentDomain(forName: Defaults.Keys.testingSuiteName)
     }
@@ -74,7 +83,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     Task {
       for await value in Defaults.updates(.menuIcon, initial: false) {
-        statusItem.button?.image = value.image
+        _ = value
+        updateSecureStatusItem()
       }
     }
 
@@ -118,6 +128,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     ) {
       ContentView()
     }
+    startSecurePaste()
   }
 
   func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
@@ -126,9 +137,91 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationWillTerminate(_ notification: Notification) {
+    SecurePasteService.shared.stop()
     if Defaults[.clearOnQuit] {
       AppState.shared.history.clear()
     }
+  }
+
+  private func configureSecurePaste() {
+    let copy = KeyboardLayout.current.commandSwitchesToQWERTY ? UInt16(8) : Sauce.shared.keyCode(for: .c)
+    let paste = KeyboardLayout.current.commandSwitchesToQWERTY ? UInt16(9) : Sauce.shared.keyCode(for: .v)
+    SecurePasteService.shared.configure(
+      applications: Set(Defaults[.secureApplications]), copyKeyCode: copy, pasteKeyCode: paste
+    )
+  }
+
+  private func startSecurePaste() {
+    guard !isAutomatedTest else { return }
+    validatePopupShortcut()
+    configureSecurePaste()
+    SecurePasteService.shared.start()
+    updateSecureStatusItem()
+    observeSecureState()
+    Task {
+      for await _ in Defaults.updates(.secureApplications, initial: false) {
+        configureSecurePaste()
+      }
+    }
+    Task {
+      for await _ in NotificationCenter.default.notifications(
+        named: NSTextInputContext.keyboardSelectionDidChangeNotification
+      ) {
+        configureSecurePaste()
+      }
+    }
+  }
+
+  private func observeSecureState() {
+    _ = withObservationTracking {
+      let security = SecurePasteService.shared
+      return (security.showsRedIcon, security.showsGreenConfirmation,
+              security.isOperational, security.message, security.remainingSeconds)
+    } onChange: { [weak self] in
+      DispatchQueue.main.async { [weak self] in
+        self?.updateSecureStatusItem()
+        self?.observeSecureState()
+      }
+    }
+  }
+
+  private func validatePopupShortcut() {
+    guard let shortcut = KeyboardShortcuts.getShortcut(for: .popup),
+          shortcut.key == .c || shortcut.key == .v,
+          shortcut.modifiers == [.command] || shortcut.modifiers == [.command, .shift] else { return }
+    KeyboardShortcuts.setShortcut(.init(.h, modifiers: [.control, .option, .command]), for: .popup)
+  }
+
+  private func updateSecureStatusItem() {
+    let security = SecurePasteService.shared
+    if security.showsRedIcon || security.showsGreenConfirmation,
+       let image = Defaults[.menuIcon].image.copy() as? NSImage {
+      image.isTemplate = false
+      image.lockFocus()
+      (security.showsGreenConfirmation ? NSColor.systemGreen : NSColor.systemRed).setFill()
+      NSRect(origin: .zero, size: image.size).fill(using: .sourceAtop)
+      image.unlockFocus()
+      statusItem.button?.image = image
+      statusItem.button?.appearsDisabled = false
+    } else if !security.isOperational && !isAutomatedTest {
+      let image = NSImage(systemSymbolName: "exclamationmark.shield.fill", accessibilityDescription: "Protection indisponible")?
+        .withSymbolConfiguration(.init(paletteColors: [.systemOrange]))
+      image?.isTemplate = false
+      statusItem.button?.image = image
+      statusItem.button?.appearsDisabled = false
+    } else {
+      if let image = Defaults[.menuIcon].image.copy() as? NSImage {
+        image.isTemplate = false
+        image.lockFocus()
+        NSColor.secondaryLabelColor.setFill()
+        NSRect(origin: .zero, size: image.size).fill(using: .sourceAtop)
+        image.unlockFocus()
+        statusItem.button?.image = image
+      }
+      statusItem.button?.appearsDisabled = isStatusItemDisabled
+    }
+    statusItem.button?.toolTip = "SecurePaste — " + security.message
+    updateStatusItemAccessibilityLabel()
   }
 
   private func ensureMigration(key: String, _ action: () -> Void) {
@@ -184,6 +277,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   @objc
   private func performStatusItemClick() {
+    if NSApp.currentEvent?.type == .rightMouseUp {
+      let menu = NSMenu()
+      let status = NSMenuItem(title: SecurePasteService.shared.message, action: nil, keyEquivalent: "")
+      menu.addItem(status)
+      menu.addItem(.separator())
+      let settings = NSMenuItem(title: "Réglages SecurePaste…", action: #selector(openSecureSettings), keyEquivalent: "")
+      settings.target = self
+      menu.addItem(settings)
+      let clear = NSMenuItem(title: "Détruire le secret", action: #selector(clearSecureSecret), keyEquivalent: "")
+      clear.target = self
+      clear.isEnabled = SecurePasteService.shared.remainingSeconds > 0
+      menu.addItem(clear)
+      statusItem.menu = menu
+      statusItem.button?.performClick(nil)
+      statusItem.menu = nil
+      return
+    }
     let modifierFlags = (NSApp.currentEvent?.modifierFlags ?? [])
       .union(NSEvent.modifierFlags)
       .intersection(.deviceIndependentFlagsMask)
@@ -214,6 +324,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
   }
 
+  @objc private func openSecureSettings() {
+    AppState.shared.openPreferences()
+  }
+
+  @objc private func clearSecureSecret() {
+    SecurePasteService.shared.clear()
+  }
+
   private func disableUnusedGlobalHotkeys() {
     let names: [KeyboardShortcuts.Name] = [.delete, .pin, .togglePreview]
     KeyboardShortcuts.disable(names)
@@ -223,10 +341,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       object: nil,
       queue: nil
     ) { notification in
-      guard let name = notification.userInfo?["name"] as? KeyboardShortcuts.Name,
-            names.contains(name) else { return }
+      guard let name = notification.userInfo?["name"] as? KeyboardShortcuts.Name else { return }
       MainActor.assumeIsolated {
-        KeyboardShortcuts.disable(name)
+        if names.contains(name) { KeyboardShortcuts.disable(name) }
+        if name == .popup { self.validatePopupShortcut() }
       }
     }
   }

@@ -16,7 +16,7 @@ class Storage {
     return ByteCountFormatter().string(fromByteCount: size)
   }
 
-  private let url = URL.applicationSupportDirectory.appending(path: "Maccy/Storage.sqlite")
+  private let url = URL.applicationSupportDirectory.appending(path: "SecurePaste/Storage.sqlite")
 
   init() {
     var config = ModelConfiguration(url: url)

@@ -1,0 +1,713 @@
+{
+  "generated_at": "2026-10-20T07:45:17.747139+02:00",
+  "purpose": "Traceability; not a malware scan, certification, or absence-of-vulnerability claim",
+  "upstream_repository": "https://github.com/p0deje/Maccy.git",
+  "upstream_baseline_commit": "c700182f638d9d29bfa0aec9dc560422698854c6",
+  "remote_HEAD_observed_at_initial_review": "c700182f638d9d29bfa0aec9dc560422698854c6",
+  "initial_worktree_observed_clean": true,
+  "fork_repository": "https://github.com/AntoineViallefont/Maccy",
+  "security_module_external_dependencies": [],
+  "security_module_process_isolation": false,
+  "dependencies": [
+    {
+      "identity": "defaults",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/sindresorhus/Defaults",
+      "state": {
+        "revision": "00a7465a0668a87fa159e779b9d80f1f9652357e",
+        "version": "9.0.9"
+      },
+      "checkout_commit": "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "fuse-swift",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/krisk/fuse-swift",
+      "state": {
+        "revision": "26ba868691b2d8b7bf2b1322951eb591be70ccca",
+        "version": "1.4.0"
+      },
+      "checkout_commit": "26ba868691b2d8b7bf2b1322951eb591be70ccca",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "keyboardshortcuts",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/sindresorhus/KeyboardShortcuts",
+      "state": {
+        "revision": "772133d9dbe800fdac0473226822994c5c162c58",
+        "version": "3.1.0"
+      },
+      "checkout_commit": "772133d9dbe800fdac0473226822994c5c162c58",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "launchatlogin-modern",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/sindresorhus/LaunchAtLogin-Modern",
+      "state": {
+        "revision": "a04ec1c363be3627734f6dad757d82f5d4fa8fcc",
+        "version": "1.1.0"
+      },
+      "checkout_commit": "a04ec1c363be3627734f6dad757d82f5d4fa8fcc",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "sauce",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/Clipy/Sauce",
+      "state": {
+        "revision": "1fce89ccc9cbb091022c17ef8f9939901d4e951a",
+        "version": "2.5.2"
+      },
+      "checkout_commit": "1fce89ccc9cbb091022c17ef8f9939901d4e951a",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "settings",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/sindresorhus/Settings.git",
+      "state": {
+        "revision": "f41475771f65379ca10852c95119a7f53f0de5a5",
+        "version": "3.1.2"
+      },
+      "checkout_commit": "f41475771f65379ca10852c95119a7f53f0de5a5",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "swift-log",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/apple/swift-log",
+      "state": {
+        "revision": "9c6fb14227f55d8f711ce3847dc2f419fb0ecacb",
+        "version": "1.15.1"
+      },
+      "checkout_commit": "9c6fb14227f55d8f711ce3847dc2f419fb0ecacb",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "swift-syntax",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/swiftlang/swift-syntax",
+      "state": {
+        "revision": "050f1a346fbbac0ca2cfb15a95274f7bd1cf0ccf",
+        "version": "604.0.0"
+      },
+      "checkout_commit": "050f1a346fbbac0ca2cfb15a95274f7bd1cf0ccf",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    },
+    {
+      "identity": "swifthexcolors",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/thii/SwiftHEXColors",
+      "state": {
+        "revision": "1f886cb20fedda14a5ac75efd09bc99c95b43a18",
+        "version": "1.4.1"
+      },
+      "checkout_commit": "1f886cb20fedda14a5ac75efd09bc99c95b43a18",
+      "checkout_tracked_changes": "",
+      "matches_resolved_revision": true
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Maccy/About.swift",
+      "sha256": "c9a96a5dd87065e59e8a667fec775d5244a14f80ceffcbd113414f75e2c7e0c7"
+    },
+    {
+      "path": "Maccy/Accessibility.swift",
+      "sha256": "178b91f8acea5dd71fd189d784c84f79bec118e45a059df0bc6e9b741531af78"
+    },
+    {
+      "path": "Maccy/AppDelegate.swift",
+      "sha256": "e485fc2945b45d25c871a7179c73434f95c6533da460a71433f63ed45a1f7be5"
+    },
+    {
+      "path": "Maccy/AppStoreReview.swift",
+      "sha256": "b234984d4959670f68b749a92c88cee92eea783d47613c153d69877f580b0b05"
+    },
+    {
+      "path": "Maccy/ApplicationImage.swift",
+      "sha256": "6f98d9283ad6903c49679542b08667b9289ac7b341624d6ac88a0082935fd908"
+    },
+    {
+      "path": "Maccy/ApplicationImageCache.swift",
+      "sha256": "9822a7e1894c6002d3ec62cf2325bf2a4681383d14f96c2c7a695166333f59b0"
+    },
+    {
+      "path": "Maccy/Clipboard.swift",
+      "sha256": "294c63e347e8941c21affd15a235d406b57f13d83fefd645b29304e9e8984e29"
+    },
+    {
+      "path": "Maccy/ColorImage.swift",
+      "sha256": "53530413d4dcc6fbc1256f43ba726e3bdf428830a873a48ee40f4b06cdd4a6e1"
+    },
+    {
+      "path": "Maccy/ConcatenatedCollection.swift",
+      "sha256": "1c75da186789b9b028dcba3065d16ac2764abf44206e39c42c6d0fe2be4813f2"
+    },
+    {
+      "path": "Maccy/Extensions/Array+MoveElements.swift",
+      "sha256": "5bd9506efed97cc37c9ff689fba6ace88c627caf6705fec655df0a8141e478eb"
+    },
+    {
+      "path": "Maccy/Extensions/Collection+Surrounding.swift",
+      "sha256": "68471484d75b3b67c8b528012f24cb2bc102378455562144085b71a861649c02"
+    },
+    {
+      "path": "Maccy/Extensions/Color+Random.swift",
+      "sha256": "57c6b95fe7f420672d9ba017999425625b54bf34b81fe83e6f15bf90d8ca55fe"
+    },
+    {
+      "path": "Maccy/Extensions/Defaults.Keys+Names.swift",
+      "sha256": "878a35d23eae59660546f072891a37ec00103fcdfde69b6a7a5e6ff22ab11435"
+    },
+    {
+      "path": "Maccy/Extensions/Dictionary+RemoveItem.swift",
+      "sha256": "cc613b38f6b49b1aa594d4d3ab28c099711b356c256d97f3f85e5ad6a18be9bd"
+    },
+    {
+      "path": "Maccy/Extensions/KeyEquivalent+Keys.swift",
+      "sha256": "3e187fdfaa3134cace7a2e56193e36bff5ff8cf6c2d09d835fbc076366c6e066"
+    },
+    {
+      "path": "Maccy/Extensions/KeyboardShortcuts.Name+Shortcuts.swift",
+      "sha256": "86583528813d042bdda04f2695cd0cba605cde24ec71f360323fe4e93df9b9d9"
+    },
+    {
+      "path": "Maccy/Extensions/ModifierFlags+Current.swift",
+      "sha256": "0d2cc6d004a46d4b1b5d7c75baf3152cdefc8d816c1482de6b5461226ef1dbad"
+    },
+    {
+      "path": "Maccy/Extensions/ModifierFlags+Description.swift",
+      "sha256": "67181f0dd6cc66808f745bc7438dca36297019b5266a551500049a42392b93fd"
+    },
+    {
+      "path": "Maccy/Extensions/NSApplication+Windows.swift",
+      "sha256": "122814ffefe82c016722b0ae1aa1cf4880570028f86ab5c7cfc05571e96f5c5e"
+    },
+    {
+      "path": "Maccy/Extensions/NSImage+Names.swift",
+      "sha256": "0c89b0f4885f72e5601d7bc0d2aa6a03b6b7cbdf49630b13e46edc2c241f610f"
+    },
+    {
+      "path": "Maccy/Extensions/NSImage+Resized.swift",
+      "sha256": "ac420b0f9ac7dacd8033a3f9f4c9b24640c0ce49a05f7f182f3330c099ed69ac"
+    },
+    {
+      "path": "Maccy/Extensions/NSPasteboard.PasteboardType+Types.swift",
+      "sha256": "48bdbfbf0d7a7240363148cb109f14cc79dc46b3889f9b6ad8e013e87cae8966"
+    },
+    {
+      "path": "Maccy/Extensions/NSPoint+DefaultsSerializable.swift",
+      "sha256": "802a0bd3c1a7e684cf4b99b73b0681df73556122757d195e7136d474a4332c74"
+    },
+    {
+      "path": "Maccy/Extensions/NSRect+Centered.swift",
+      "sha256": "e99172635f563ff8d22eecdf2e2e89559031de6f4d34eca9f4b8bfc8de2eece2"
+    },
+    {
+      "path": "Maccy/Extensions/NSRunningApplication+WindowFrame.swift",
+      "sha256": "60eb5e5d351c11fda6d1c17f41366f00593bfb40250635a109512684e0261334"
+    },
+    {
+      "path": "Maccy/Extensions/NSScreen+ForPopup.swift",
+      "sha256": "d4d7dcaab943673a6217629160ddbd7fab6eacd371d379aec20b5ba79fd33ca9"
+    },
+    {
+      "path": "Maccy/Extensions/NSSize+DefaultsSerializable.swift",
+      "sha256": "2fb0cb15efa48c4ced7090deeb959f64d0183c252a7937f677d17dd340be0912"
+    },
+    {
+      "path": "Maccy/Extensions/NSSound+Named.swift",
+      "sha256": "d2b8e04e630ef18549948990cdcd9de2e1e1298e46ae6fea10e902b1f148a14c"
+    },
+    {
+      "path": "Maccy/Extensions/NSWorkspace+ApplicationName.swift",
+      "sha256": "4d233b79584851fd39c3bd5713abaf1859a38d764988520c263081050a40e811"
+    },
+    {
+      "path": "Maccy/Extensions/Sauce+KeyboardShortcuts.swift",
+      "sha256": "36f2a2a6ee196b3b40d3e7ccbd2b34caadc170618caf7a927d8c96e7f63075bd"
+    },
+    {
+      "path": "Maccy/Extensions/Settings.PaneIdentifier+Panes.swift",
+      "sha256": "af141c69be1d472514bc3d0acac10d1befae62a49b3f7e98e0dbc238d3f1edd3"
+    },
+    {
+      "path": "Maccy/Extensions/String+Identifiable.swift",
+      "sha256": "7d0f1eec775d6bf6627bad87efa79a6c3cc4297c4e421918e2d91d6042993433"
+    },
+    {
+      "path": "Maccy/Extensions/String+Shortened.swift",
+      "sha256": "c5fdaac345d74b49a558e66d173650c5480856c53af1bcfa24bbff2700473d7d"
+    },
+    {
+      "path": "Maccy/Extensions/String+UnsafeForTitleLayout.swift",
+      "sha256": "d7df3089642e3c6fae6a455fd5ba906f337d0829e96c8b6dbd98f7153dc96811"
+    },
+    {
+      "path": "Maccy/Extensions/View+ButtonAction.swift",
+      "sha256": "720eac8b0ac32cfee10727762b49ae6ff6a67528d832dabf1a5ae4e4f2055f7f"
+    },
+    {
+      "path": "Maccy/Extensions/View+Invisible.swift",
+      "sha256": "3f5c83c7cbc4fa039c10c5cbe08cb0c25487c923d9aca2d26dabab5a721a6658"
+    },
+    {
+      "path": "Maccy/FloatingPanel.swift",
+      "sha256": "5366fa67cf1a0d0e30fef4f3d07579319ba307fe68bf4797e5884fbd55f9f7c7"
+    },
+    {
+      "path": "Maccy/GlobalHotKey.swift",
+      "sha256": "9f5db53aad6c2ff00cb0eeb997c3b74215a7c8f0056833cdb30a85505318fa0e"
+    },
+    {
+      "path": "Maccy/HighlightMatch.swift",
+      "sha256": "85d849ffe42d9075963bc35604da341a8a50beeae4f5c5ba8bff19f41c8bbdb3"
+    },
+    {
+      "path": "Maccy/HistoryItemAction.swift",
+      "sha256": "3a8706f3fe682be631a5c7b17bde0f5706cff3caf119409e56d257138127f402"
+    },
+    {
+      "path": "Maccy/Info.plist",
+      "sha256": "d8a94a5168daec5b69cc9572fb706c559477bd78e689eff4e6b4185174651c12"
+    },
+    {
+      "path": "Maccy/Intents/AppIntentError.swift",
+      "sha256": "156aeb8ad296dd1967e442ae015c1614d027651ba9c3156e7c78813ae153e4cb"
+    },
+    {
+      "path": "Maccy/Intents/Clear.swift",
+      "sha256": "9beb7009c3f1d5eea40f59952c71688297ce24b6c9abf37fc1f0328a0011974d"
+    },
+    {
+      "path": "Maccy/Intents/Delete.swift",
+      "sha256": "c1d034258d697d07eaa6dab655af67539a9f1a9395cf3f5af925174cc90b7745"
+    },
+    {
+      "path": "Maccy/Intents/Get.swift",
+      "sha256": "13055f37a5e5e80875a10b879ec8bb8e22d4a249572cc02ea095cf88c06fffe3"
+    },
+    {
+      "path": "Maccy/Intents/HistoryItemAppEntity.swift",
+      "sha256": "fc300bfb5f0b6ade1bd3bce68a9572b7f9892196e4b15209696682ddd818e9d2"
+    },
+    {
+      "path": "Maccy/Intents/Select.swift",
+      "sha256": "a6aaeb58002db2b3229320d183cefd134490ed4221236d9c1ea69e23e4760919"
+    },
+    {
+      "path": "Maccy/ItemsProtocol.swift",
+      "sha256": "e7e022f8399a1d6099739f6ca85d6641a92a0c9b7a80a5489c5a2f973b855da4"
+    },
+    {
+      "path": "Maccy/KeyChord.swift",
+      "sha256": "a9bac25389b97e4208b1dcfc22323ebc6cc4752a42e92b365e9e17023a805edb"
+    },
+    {
+      "path": "Maccy/KeyShortcut.swift",
+      "sha256": "77c1ee8654cbe22e4577c15bf55d249e77d83d0786bf8846fbdfd4cbeb57d8c1"
+    },
+    {
+      "path": "Maccy/KeyboardLayout.swift",
+      "sha256": "8773746224500368af167e3c1c48eb2df2b2ed61ed489242897b6117ac397246"
+    },
+    {
+      "path": "Maccy/Maccy.entitlements",
+      "sha256": "55a9c3dbd2e3925788619684eace456de8fcbdd4e0afb681237cdcff36d6bda9"
+    },
+    {
+      "path": "Maccy/MaccyApp.swift",
+      "sha256": "ee1e0db417a316008b55e689637c2c1f912bd7ae91af5eab642f365b15d318d9"
+    },
+    {
+      "path": "Maccy/MenuIcon.swift",
+      "sha256": "bdb98812bf8e720da7feaba083d701a81bb9f3822b380c4d474f5abdb08958c8"
+    },
+    {
+      "path": "Maccy/Models/HistoryItem.swift",
+      "sha256": "04c38a8271cb33b0873987dabb2f5fc126d5fad160c404ec0ee0e15b8822b15b"
+    },
+    {
+      "path": "Maccy/Models/HistoryItemContent.swift",
+      "sha256": "fe29e8be02e5c422aaec5bf080915bd84c724f725b2603060667056568b8ccde"
+    },
+    {
+      "path": "Maccy/Models/SizedString.swift",
+      "sha256": "fdc15c950b055f28cec4241e662945f7bae3bfe7793359e31beb298112d008bf"
+    },
+    {
+      "path": "Maccy/Notifier.swift",
+      "sha256": "3d31594ac11521a9322668ae2e28985afbe705fd02489893b179eb8d6cc9f369"
+    },
+    {
+      "path": "Maccy/Observables/AppState.swift",
+      "sha256": "42facce48f6043a6d56b13cd7a93446c1c7ebce1b349ef4fa5ee335777931d83"
+    },
+    {
+      "path": "Maccy/Observables/Footer.swift",
+      "sha256": "bf678c0760ea4071ec11fda2af9cbdce9216efd4541049d22a3650de6be46c69"
+    },
+    {
+      "path": "Maccy/Observables/FooterItem.swift",
+      "sha256": "47f232f67c31c0ad125682fd823fd94c5e8a9585547a7e92174eda0890a47cd4"
+    },
+    {
+      "path": "Maccy/Observables/History.swift",
+      "sha256": "d0a94bbd6facdfbb3c8f52381f626dc6e19109e8667f9357b36c93c58bd48be2"
+    },
+    {
+      "path": "Maccy/Observables/HistoryItemDecorator.swift",
+      "sha256": "d3066fdad72297bca7a513382afa20082f983c9cc5127ba3dbe7b5dd9e1bc891"
+    },
+    {
+      "path": "Maccy/Observables/ModifierFlags.swift",
+      "sha256": "18d04aedbcb2ab79b77d85700b7037121d7af151e09a85ab9cd705078ff05cc3"
+    },
+    {
+      "path": "Maccy/Observables/NavigationManager.swift",
+      "sha256": "da3e82f74b604dad200323707c63558d5ee53afc7130161f297e9d2237e838e8"
+    },
+    {
+      "path": "Maccy/Observables/PinManager.swift",
+      "sha256": "c14b80981906b528a9f462662cc52dab163d5903a4d3b5e1f657ccd615dba1c1"
+    },
+    {
+      "path": "Maccy/Observables/Popup.swift",
+      "sha256": "68536084c0c69e235b50d353133b7015dab6ba576e9eb01612e6012c261a8b9f"
+    },
+    {
+      "path": "Maccy/Observables/SlideoutController.swift",
+      "sha256": "3432dbf17401479c38e99c4b84c98b334d1548ca8514cfab7c48133f6e23dcf2"
+    },
+    {
+      "path": "Maccy/PasteStack.swift",
+      "sha256": "c7830cc4b0ca1400b04892905567248d522653780d921d93e8e37334147fd3bd"
+    },
+    {
+      "path": "Maccy/PinsPosition.swift",
+      "sha256": "f50bb43de476915effeade258428ea7499dbfbecbb32667c996f3f31c03176e4"
+    },
+    {
+      "path": "Maccy/PopupPosition.swift",
+      "sha256": "dd33898cdad1683902e085d6c969718d7916feafc74d6b42eb6d46d36df52d04"
+    },
+    {
+      "path": "Maccy/Search.swift",
+      "sha256": "cf490cba6703ea55634d54a916625b027b5448c8d7227637f62f15829cec9559"
+    },
+    {
+      "path": "Maccy/SearchVisibility.swift",
+      "sha256": "d18cbb44e8974f5b1aadb18a6c3421666038920c73d0badbcae9d66a70398ad8"
+    },
+    {
+      "path": "Maccy/SecurePasteSettingsView.swift",
+      "sha256": "048c3a08c1340ff4dcc58288f907651825983f1a4cbb6f52203f8bd53c702bca"
+    },
+    {
+      "path": "Maccy/Selection.swift",
+      "sha256": "eb3ea26a01f74a2d139184a7c22fb9279467892d46eb705eb284166ab455a9a7"
+    },
+    {
+      "path": "Maccy/Settings/AdvancedSettingsPane.swift",
+      "sha256": "86bed237733b00c039f00f223085cb3735cee957da6f5beaa8e48813cafc0f7b"
+    },
+    {
+      "path": "Maccy/Settings/AppearanceSettingsPane.swift",
+      "sha256": "f94f868cd06f93ea43bd7e4cffffd374c266b07aa00fcfebb67cb14eccfdfed4"
+    },
+    {
+      "path": "Maccy/Settings/GeneralSettingsPane.swift",
+      "sha256": "20a7b79e393ca91ff6db90aa2f825af9945956c7d21a039696474ab6c7179776"
+    },
+    {
+      "path": "Maccy/Settings/IgnoreSettingsPane/IgnoreApplicationsSettingsView.swift",
+      "sha256": "07d4489c997d5d6e59a78d4c3c04d337185816bb3f49ffff5770c7b759d5239d"
+    },
+    {
+      "path": "Maccy/Settings/IgnoreSettingsPane/IgnorePasteboardTypesSettingsView.swift",
+      "sha256": "04ab0ce81079039542735b21a68161f1cf55770880723843e243c00771edcc2f"
+    },
+    {
+      "path": "Maccy/Settings/IgnoreSettingsPane/IgnoreRegexpsSettingsView.swift",
+      "sha256": "7c14936c6392f45a8005b17fd537bdddb3c6d02ea11f5ffdffdc7b40df302ce7"
+    },
+    {
+      "path": "Maccy/Settings/IgnoreSettingsPane.swift",
+      "sha256": "eebb02e93a9ea212bb5625db83f4f5ea0c9b468156d7f617761f021e237accf1"
+    },
+    {
+      "path": "Maccy/Settings/StorageSettingsPane.swift",
+      "sha256": "5aa57e081d2dab4201597ae3e23344a982af76fe22f903856f8c91a070951819"
+    },
+    {
+      "path": "Maccy/SoftwareUpdater.swift",
+      "sha256": "8ffc6aa1bcdccbe018cf4273b81484e384f33d6061181865beb091ef6ae2861d"
+    },
+    {
+      "path": "Maccy/Sorter.swift",
+      "sha256": "3d091b30a14021a39f1d6297bd58826cb48c32123039da151a027c5f4679dfd6"
+    },
+    {
+      "path": "Maccy/Storage.swift",
+      "sha256": "8ca67cdd278669643a3fd1e36bb75138ede08034494f21aa5d95085da1212292"
+    },
+    {
+      "path": "Maccy/Throttler.swift",
+      "sha256": "d2da44a82a9c7b80b90cb422dea3dfdcdb948a31671e276e19711ba5da9b4d02"
+    },
+    {
+      "path": "Maccy/Views/AppImageView.swift",
+      "sha256": "b9e4cba6effe380534a46e3c5c4b2f6c11010aa28d0c7bd1c88d6cbd551fb429"
+    },
+    {
+      "path": "Maccy/Views/AsyncView.swift",
+      "sha256": "c5cccd2468cf76d0ad561be2cb30b3e9009b6a4bf638f341ab098da33955735f"
+    },
+    {
+      "path": "Maccy/Views/ConfirmationView.swift",
+      "sha256": "3efdbb52caed30577c3283c01270f94b0bfcb7c30f6d44cb1d8f6985b097df6b"
+    },
+    {
+      "path": "Maccy/Views/ContentView.swift",
+      "sha256": "66db685444930002864e18cacbab06d422e54f91433caad9f501026e59627301"
+    },
+    {
+      "path": "Maccy/Views/EnumeratedForEach.swift",
+      "sha256": "e382ed4d77b95df0a968495b485023ac2bb115ee64d248a25dc0a5a72f0be6d0"
+    },
+    {
+      "path": "Maccy/Views/FooterItemView.swift",
+      "sha256": "e429de71361860b7924d67a765806e239dd25f68b83266201f5c4698e72505c1"
+    },
+    {
+      "path": "Maccy/Views/FooterView.swift",
+      "sha256": "b480d0dedb01d42b19171e246f767d5c943e2c760be8f313ab9160a270c4f3a4"
+    },
+    {
+      "path": "Maccy/Views/HeaderView.swift",
+      "sha256": "13afd5228e796f8f7e5d229625fcc882304f5110003c6905e6c5e21b2e0287dc"
+    },
+    {
+      "path": "Maccy/Views/HeightReaderModifier.swift",
+      "sha256": "94408596188c231acab8614669ea4f8c6c4a7a0cb77c00b9d8d60ee206f3ac82"
+    },
+    {
+      "path": "Maccy/Views/HistoryItemView.swift",
+      "sha256": "3ab83462fb9207db4d0ca956fc87fea8e8dc9f3299ec4c9e156b8fa0d353968b"
+    },
+    {
+      "path": "Maccy/Views/HistoryListView.swift",
+      "sha256": "22353090c694a657cf547ac1600c2355c4199f89e7421bee1e5670d9c169c903"
+    },
+    {
+      "path": "Maccy/Views/HoverSelectionModifier.swift",
+      "sha256": "ebabee3a2da1bef5319a2b3d09d60be56f620f1f72b9746a5189c33bce6fca0f"
+    },
+    {
+      "path": "Maccy/Views/ItemEditorView.swift",
+      "sha256": "91083305570d9a23c9212647debbf19da81d97d784d6056c104aeaeaa6a09e53"
+    },
+    {
+      "path": "Maccy/Views/KeyHandlingView.swift",
+      "sha256": "93930bd030ce866c25dc096603876d411bbc75db10a3d7b8abb3fc8b796683fb"
+    },
+    {
+      "path": "Maccy/Views/KeyboardShortcutView.swift",
+      "sha256": "af1e5e5736e9d26daaa8491800fda0fab9c30087b7fb66b1315ab79c8b148cdc"
+    },
+    {
+      "path": "Maccy/Views/LargeTextView.swift",
+      "sha256": "bc475105a871f1ef638b99e3158c527ef470e48dfd13a8b4097865e0e081b410"
+    },
+    {
+      "path": "Maccy/Views/LegacyReorderableContainer.swift",
+      "sha256": "162b4ad6ce3c709c2b88c5d23dac64f259a09b85f3a8ae6a4ea335ca6cb4d881"
+    },
+    {
+      "path": "Maccy/Views/ListHeaderView.swift",
+      "sha256": "b8b0f63234d6de7ca889773a8e30b3d1019a00f84f9ada29d8a4ba4fde95c3f4"
+    },
+    {
+      "path": "Maccy/Views/ListItemTitleView.swift",
+      "sha256": "e1c6ff965eeca5501b5b73c4eb604590ed538f995d77c31d3758a2954895bc5e"
+    },
+    {
+      "path": "Maccy/Views/ListItemView.swift",
+      "sha256": "10c8cfa744aa18bd2b5d83a1668e969142fcce01592628b49b100444f99aa3db"
+    },
+    {
+      "path": "Maccy/Views/MouseMovedViewModifer.swift",
+      "sha256": "481f007dbd4d6d004f4d0dc746aa80f683820340cd3af4e4b6c7a33744e2926e"
+    },
+    {
+      "path": "Maccy/Views/MovableByWindowBackgroundModifier.swift",
+      "sha256": "57ef8a85998dd774ae2945fd56051cf401e5258bcfd53714be550d0be7afdaf3"
+    },
+    {
+      "path": "Maccy/Views/MultipleSelectionListView.swift",
+      "sha256": "f83c648f3296efdf3f0f4c64588e92ddba4a48751e511575b2861c565ced6523"
+    },
+    {
+      "path": "Maccy/Views/PasteStackItemView.swift",
+      "sha256": "44a8b8dfe96649f958fe21dddbfc2f7a8a48c1a8f8bb48b13a592a00ffc6fbad"
+    },
+    {
+      "path": "Maccy/Views/PasteStackPreviewView.swift",
+      "sha256": "75a72e27297ed5d2fbbfc2e9fa5520d5cfb4ea9c2edc563b1daf6f558d699db8"
+    },
+    {
+      "path": "Maccy/Views/PasteStackView.swift",
+      "sha256": "21fc3f6c834b63343a09934b2ffd3facab1e473ece1c814f5a60932cec575f1c"
+    },
+    {
+      "path": "Maccy/Views/PinsView.swift",
+      "sha256": "65c9b724bbcbb08a5c28a6cb45dcec2f05a8039a0bc9f451328733d905694c46"
+    },
+    {
+      "path": "Maccy/Views/PreviewItemView.swift",
+      "sha256": "8543e5dfccd798e30f74936e472e3be3fb71dc298a59048e19afe266cc241fd1"
+    },
+    {
+      "path": "Maccy/Views/ReorderableContainer.swift",
+      "sha256": "500c9c4a07e2a617e7741ba8548fdbe937ae35fd855303de161817289015bdc6"
+    },
+    {
+      "path": "Maccy/Views/SearchFieldView.swift",
+      "sha256": "9644671ce278883a9c4c1a703101cba6de88984ccb9f5e57b03cc7e2b9f3b820"
+    },
+    {
+      "path": "Maccy/Views/SlideoutContentView.swift",
+      "sha256": "bcca4641c57e7fcbf7b265d263d3fb3f56de90821080638a76e29b9cffcfeba0"
+    },
+    {
+      "path": "Maccy/Views/SlideoutView.swift",
+      "sha256": "35dd21e3a40df67ed78c4e0c649ca07e7eabdfc5249bc903eb445015f1424948"
+    },
+    {
+      "path": "Maccy/Views/ToolbarView.swift",
+      "sha256": "2ad197a91aa90ef754e60824f24a210e1c55b12a8d444d4659246ececf1fc0f9"
+    },
+    {
+      "path": "Maccy/Views/VisualEffectView.swift",
+      "sha256": "eeb9d7852177d6311979dc5b06dbef5e46e073c6233d09a5a601cbdad6d05845"
+    },
+    {
+      "path": "Maccy/Views/WrappingTextView.swift",
+      "sha256": "250c820fb482b632c1a1f7da26e3fd4a1f905ea76405dfa25a46cb77f9ce53bb"
+    },
+    {
+      "path": "Maccy/VoiceOver.swift",
+      "sha256": "242b537187c895fdda37271086ca0fbcb04936c36c92228a5a669568e4bfb1a9"
+    },
+    {
+      "path": "Maccy.xcodeproj/project.pbxproj",
+      "sha256": "258278bbf52ffba28ec5e27b973eece9e43f451c32b35e48703e99ba902eb825"
+    },
+    {
+      "path": "Maccy.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved",
+      "sha256": "c49d3219ebea3ad656c7f968459d27ecd2b95e39b6851c6103a0f0a1b74d04e9"
+    },
+    {
+      "path": "MaccyTests/ClipboardTests.swift",
+      "sha256": "d71cc099403bf942b02695d2d3b07f6abc3d9bcdd9f4c848e8863b291e29bd3c"
+    },
+    {
+      "path": "MaccyTests/CollectionSurroundingTests.swift",
+      "sha256": "4c8201b3cdf140ee641c768e10ed9dad0ea0db8a2860d4e1bcb9d23a32a5658d"
+    },
+    {
+      "path": "MaccyTests/ColorImageTests.swift",
+      "sha256": "def9c02e128b532f6093c0a8a7d7478b801e7c146f27da6176a5f7d6d03542b3"
+    },
+    {
+      "path": "MaccyTests/HistoryDecoratorTests.swift",
+      "sha256": "e6840ef0bec839e16aa1b5d00b4120a10715d306d2db13aa4ed4378a6cd44f58"
+    },
+    {
+      "path": "MaccyTests/HistoryItemTests.swift",
+      "sha256": "860fabb474ed6fbcb0da1e6c9d9fab9beb7f06007898510e2f6ea30e62eb4c66"
+    },
+    {
+      "path": "MaccyTests/HistoryTests.swift",
+      "sha256": "0d55340c553617bfcd805f0b82fedd1f6cf4da4f36fdce289fc04eff5e376f92"
+    },
+    {
+      "path": "MaccyTests/Info.plist",
+      "sha256": "b73f9f8fc6e2367490a730044e227f0e179ce5b796c19526236599ed9d1b592a"
+    },
+    {
+      "path": "MaccyTests/IntentBoundsTests.swift",
+      "sha256": "cd48d468e75b530b769543e3958ad7d31316715d60e1137cb6692ab72fde39ae"
+    },
+    {
+      "path": "MaccyTests/SearchTests.swift",
+      "sha256": "a567782d3781a3af210239a913081924d762a810466bbaabccfcc48c80c4cfa2"
+    },
+    {
+      "path": "MaccyTests/ShortenedTests.swift",
+      "sha256": "e7eb8e35171de4183c468a3fd04c1333a4ba0e9a9232e552cb1a92fd031b9816"
+    },
+    {
+      "path": "MaccyTests/SorterTests.swift",
+      "sha256": "8491863447203532986ad278a9790d7c8407e3e460bc706e38026f14863d93eb"
+    },
+    {
+      "path": "MaccyTests/UnsafeForTitleLayoutTests.swift",
+      "sha256": "370fd5406ebcc9278d6d328e24a70c0ea37dd6f95b7772d2d49368a34669eabf"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Package.swift",
+      "sha256": "8a3e423d01da6824d14a9af20b3822ee92ae6e5d2807a8db393b93d7cdd8e047"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Sources/SecurePasteKit/AXSelection.swift",
+      "sha256": "bdf2da64fb62931c6885a172eb64d3b191527c2034d74713817db7ccd50c22b2"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Sources/SecurePasteKit/EphemeralVault.swift",
+      "sha256": "72136dd40e0fe026c29f4084b991d0800528ef165ef449172bfbd20b8c520b13"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Sources/SecurePasteKit/SecurePasteService.swift",
+      "sha256": "63727a55625b6522f6df3bbfcaa2f588e061744715e596606e3b82a58faf20cd"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Sources/SecurePasteKit/SecureRoute.swift",
+      "sha256": "c1d105fc596a5d410cb4cf9e02cb5acbdae48e971b442e92100b764299d4e4f6"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Sources/SecurePasteKit/SuccessPulse.swift",
+      "sha256": "05224b572a344ef2d0fc8902bb021eea5fa30ed00dd24b5db03645c145438c55"
+    },
+    {
+      "path": "Packages/SecurePasteKit/Tests/SecurePasteKitTests/VaultTests.swift",
+      "sha256": "defeb725a134a9199242c53be6a4e47b6a47639ea48a8de620418abb112f51dc"
+    },
+    {
+      "path": "Scripts/build.sh",
+      "sha256": "afcac2e00cf1b7866f827d51e14a32a2ccbcda9643b4016d6ba0ec9a81db6733"
+    },
+    {
+      "path": "Scripts/security_inventory.py",
+      "sha256": "03ad680e2c9d5b5e06851d0aeba5955b842a85cf1b4cd3eddeb0dad1bd94d983"
+    },
+    {
+      "path": "Scripts/test.sh",
+      "sha256": "16921eb52c36791326f2df163d7f5af48412b3592d6d81056658afa39e87d8aa"
+    }
+  ],
+  "validation_report": "docs/validation.json",
+  "inventory_does_not_execute_tests": true
+}
