@@ -32,6 +32,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     if SecurePasteService.shared.showsGreenConfirmation {
       accessibilityLabel += " — Insertion réussie, secret détruit"
     }
+    if !SecurePasteService.shared.isOperational && !isAutomatedTest {
+      accessibilityLabel += " — Protection indisponible"
+    }
     statusItem.button?.setAccessibilityLabel(accessibilityLabel)
   }
 
@@ -209,10 +212,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       statusItem.button?.image = image
       statusItem.button?.appearsDisabled = false
     } else if !security.isOperational && !isAutomatedTest {
-      let image = NSImage(systemSymbolName: "exclamationmark.shield.fill", accessibilityDescription: "Protection indisponible")?
-        .withSymbolConfiguration(.init(paletteColors: [.systemOrange]))
-      image?.isTemplate = false
-      statusItem.button?.image = image
+      if let image = Defaults[.menuIcon].image.copy() as? NSImage {
+        image.isTemplate = false
+        image.lockFocus()
+        NSColor.systemOrange.setFill()
+        NSRect(origin: .zero, size: image.size).fill(using: .sourceAtop)
+        image.unlockFocus()
+        image.accessibilityDescription = "SecurePaste — protection indisponible"
+        statusItem.button?.image = image
+      }
       statusItem.button?.appearsDisabled = false
     } else {
       if let image = Defaults[.menuIcon].image.copy() as? NSImage {

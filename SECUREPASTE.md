@@ -18,7 +18,7 @@ swift Scripts/generate-icons.swift
 - L’historique s’ouvre désormais avec **⌃⌥⌘H** par défaut. Les combinaisons ⌘C, ⌘V, ⇧⌘C et ⇧⌘V sont réservées et refusées pour l’ouverture d’historique.
 - Un secret unique, chiffré AES-256-GCM dans le module séparé `Packages/SecurePasteKit`, pendant **60 s maximum**.
 - Destruction au remplacement, à une capture ou insertion échouée, après insertion réussie, au changement détecté du compteur du presse-papiers, aux notifications de veille/écran éteint/session inactive et à la fermeture.
-- Aucune demande Touch ID. Icône rouge si un secret est disponible, verte pendant 1,5 s après insertion réussie et destruction, puis grise. Symbole orange si la protection est indisponible.
+- Aucune demande Touch ID. Icône rouge si un secret est disponible, verte pendant 1,5 s après insertion réussie et destruction, puis grise. Cadenas orange si la protection est indisponible.
 - Aucun repli vers le presse-papiers classique lors d’un refus de l’action sécurisée.
 
 Le secret ne transite pas par le presse-papiers général ni par l’historique. Le module n’expose aucun contenu secret à Maccy ; seul son état est public. Il n’a aucune dépendance tierce. Il est compilé séparément **dans le même processus**, sans isolation XPC : cette séparation ne protège pas d’un processus compromis.
@@ -36,7 +36,7 @@ cd "/Users/macavi/Desktop/Maccy Secure"
 open "/Users/macavi/Desktop/Maccy Secure/.build/App/Build/Products/Release/SecurePaste.app"
 ```
 
-`test.sh` exécute les 10 tests du module autonome et 18 tests sélectionnés de Maccy, sans exécuter les tests de presse-papiers général de Maccy. Ce n’est pas la suite complète de Maccy ni un test interapplications AX. `build.sh` produit une version Release et la signe localement avec le runtime renforcé. Cette signature ad hoc n’est pas une signature Developer ID ni une notarisation.
+`test.sh` exécute les 10 tests du module autonome et 19 tests sélectionnés de Maccy, sans exécuter les tests de presse-papiers général de Maccy. Ce n’est pas la suite complète de Maccy ni un test interapplications AX. `build.sh` produit une version Release et la signe localement avec le runtime renforcé. Cette signature ad hoc n’est pas une signature Developer ID ni une notarisation.
 
 ## Première utilisation
 

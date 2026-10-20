@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T07:53:08.529853+02:00",
+  "generated_at": "2026-10-20T07:58:43.247458+02:00",
   "purpose": "Traceability; not a malware scan, certification, or absence-of-vulnerability claim",
   "upstream_repository": "https://github.com/p0deje/Maccy.git",
   "upstream_baseline_commit": "c700182f638d9d29bfa0aec9dc560422698854c6",
@@ -121,7 +121,7 @@
   "source_files": [
     {
       "path": "Maccy/About.swift",
-      "sha256": "c9a96a5dd87065e59e8a667fec775d5244a14f80ceffcbd113414f75e2c7e0c7"
+      "sha256": "f9c902c58e63c2454d5ab16b3bd514a2eaf049e3dfb486e88891a8f32f44b328"
     },
     {
       "path": "Maccy/Accessibility.swift",
@@ -129,11 +129,7 @@
     },
     {
       "path": "Maccy/AppDelegate.swift",
-      "sha256": "9ad1ed376f600100ba5a03521c49c73c65b46f1597186ff6d272a393236dfab0"
-    },
-    {
-      "path": "Maccy/AppStoreReview.swift",
-      "sha256": "b234984d4959670f68b749a92c88cee92eea783d47613c153d69877f580b0b05"
+      "sha256": "cfa773e3a12e91f8de1f031758f10396e5b9deb51fa2912bfca9d4c78993c8f6"
     },
     {
       "path": "Maccy/ApplicationImage.swift",
@@ -169,7 +165,7 @@
     },
     {
       "path": "Maccy/Extensions/Defaults.Keys+Names.swift",
-      "sha256": "878a35d23eae59660546f072891a37ec00103fcdfde69b6a7a5e6ff22ab11435"
+      "sha256": "ae81adfe8755a365aabc181e4f016bdda84301f87f523faf89bdb7a7353c0c8e"
     },
     {
       "path": "Maccy/Extensions/Dictionary+RemoveItem.swift",
@@ -197,7 +193,7 @@
     },
     {
       "path": "Maccy/Extensions/NSImage+Names.swift",
-      "sha256": "0c89b0f4885f72e5601d7bc0d2aa6a03b6b7cbdf49630b13e46edc2c241f610f"
+      "sha256": "fbaca6c86ebbb33d7ecf04abf9285af545355c27f888dc3e69c33664c3001ec6"
     },
     {
       "path": "Maccy/Extensions/NSImage+Resized.swift",
@@ -452,10 +448,6 @@
       "sha256": "5aa57e081d2dab4201597ae3e23344a982af76fe22f903856f8c91a070951819"
     },
     {
-      "path": "Maccy/SoftwareUpdater.swift",
-      "sha256": "8ffc6aa1bcdccbe018cf4273b81484e384f33d6061181865beb091ef6ae2861d"
-    },
-    {
       "path": "Maccy/Sorter.swift",
       "sha256": "3d091b30a14021a39f1d6297bd58826cb48c32123039da151a027c5f4679dfd6"
     },
@@ -613,7 +605,7 @@
     },
     {
       "path": "Maccy.xcodeproj/project.pbxproj",
-      "sha256": "20b041a3ef8921edb0c7888ad9dc8deb42cbd4902b71dcf175bc3bed551a2e38"
+      "sha256": "9f167e6f9ce323bdcabf53ee61794900e9c82bd717a2a4499a201b3cb471dc55"
     },
     {
       "path": "Maccy.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved",
@@ -633,7 +625,7 @@
     },
     {
       "path": "MaccyTests/HistoryDecoratorTests.swift",
-      "sha256": "e6840ef0bec839e16aa1b5d00b4120a10715d306d2db13aa4ed4378a6cd44f58"
+      "sha256": "5a829c1d0b4f4155c9ac37aeb7db795f72b5c91b4cae7de4c0ed7b062cc16d0f"
     },
     {
       "path": "MaccyTests/HistoryItemTests.swift",
@@ -709,7 +701,7 @@
     },
     {
       "path": "Scripts/test.sh",
-      "sha256": "16921eb52c36791326f2df163d7f5af48412b3592d6d81056658afa39e87d8aa"
+      "sha256": "cf03074a211be164b35813cffc39102ff817a9dae9cec7f9f0a59d1ad74fcadd"
     }
   ],
   "validation_report": "docs/validation.json",

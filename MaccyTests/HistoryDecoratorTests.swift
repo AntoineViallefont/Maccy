@@ -60,7 +60,7 @@ class HistoryItemDecoratorTests: XCTestCase {
   }
 
   func testImage() {
-    let image = NSImage(named: "StatusBarMenuImage")!
+    let image = MenuIcon.maccy.image
     let itemDecorator = historyItemDecorator(image)
     itemDecorator.sizeImages()
     XCTAssertEqual(itemDecorator.title, "")

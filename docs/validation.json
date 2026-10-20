@@ -3,18 +3,18 @@
   "timezone": "Europe/Paris",
   "automated_tests": {
     "secure_module_passed": 10,
-    "Maccy_selected_passed": 18,
+    "Maccy_selected_passed": 19,
     "full_Maccy_suite_run": false
   },
   "release": {
     "build_succeeded": true,
     "adhoc_runtime_signature_verified": true,
-    "executable_sha256": "8d172811b89cbbc147ef30a86f9a35b833601d49b8b09ab6cf80264efd11ac1e",
+    "executable_sha256": "6b774f90703e11d0dc31905b07334e9d60baf4db9643e664277d7ddc84dfd8e2",
     "installed_path": "/Users/macavi/Applications/SecurePaste.app",
     "latest_UI_name_verified": "SecurePaste",
     "latest_installed_settings_verified": true,
     "latest_installed_accessibility_authorized": false,
-    "build_number": 63
+    "build_number": 64
   },
   "manual_AX_tests": {
     "scope": "Pre-rename Release build; physical keyboard operated by Antoine; UI inspected by agent",
@@ -38,8 +38,8 @@
     "Reauthorize the renamed and newly signed installed SecurePaste in macOS Accessibility"
   ],
   "logs_sha256": {
-    "tests": "bcf56e4a756bd7fb2401ef573b1de14a170aa0b0cbb2eeae003facb0c0944bdd",
-    "release": "da2c07db7ec277854e4182da95986b26ad3150d43a517268303587c7b17e9800"
+    "tests": "906a0ad3f6146375294fe4d57192408a424061109a8ec47efadbbecd0d357585",
+    "release": "83985998152725790475ddefd160e8d666f0f81b1ddb49ec3a26a35775f76934"
   },
   "environment": {
     "Xcode": "27.1 (27A9275)",
@@ -59,5 +59,16 @@
     "runtime_application_icon_explicit": true,
     "about_panel_visually_verified": true,
     "verified_build_number": 63
+  },
+  "cleanup": {
+    "personal_thanks_removed": true,
+    "unused_store_review_and_updater_removed": true,
+    "unused_upstream_designs_and_icons_removed": true,
+    "upstream_MIT_license_preserved": true,
+    "orange_warning_uses_padlock": true,
+    "automated_tests_passed": 29,
+    "release_build_succeeded": true,
+    "installed_signature_verified": true,
+    "about_panel_verified_in_running_build": 64
   }
 }

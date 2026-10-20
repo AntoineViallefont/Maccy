@@ -56,7 +56,7 @@ Les empreintes des sources et les informations de version sont des éléments de
 
 - Compilation Debug complète réussie.
 - 10 tests du module sécurisé réussis, dont deux sur la confirmation verte de 1,5 s et son annulation.
-- 18 tests Maccy sélectionnés réussis, dont le test des bornes des Intents. La suite complète Maccy et les tests UI/AX interapplications ne sont pas couverts par ce résultat.
+- 19 tests Maccy sélectionnés réussis, dont le test des bornes des Intents. La suite complète Maccy et les tests UI/AX interapplications ne sont pas couverts par ce résultat.
 - Compilation Release réussie, signature ad hoc avec runtime renforcé vérifiée par `codesign --verify --deep --strict`. Les droits embarqués sont vides : pas de droit de débogage injecté. Les bibliothèques dynamiques listées par `otool -L` sont des bibliothèques système Apple ; Sparkle n’est plus lié.
 - Application Release lancée ; onglet SecurePaste inspecté dans l’interface en thème sombre. L’absence d’autorisation Accessibilité est correctement signalée. Sur la version précédant le renommage, Antoine a confirmé au clavier physique la capture manuelle, l’icône rouge et l’insertion à usage unique dans TextEdit. Le contenu inséré a été observé via l’interface ; le témoin classique est resté disponible. Le collage sécurisé a aussi été rapporté dans TextEdit temporairement ajouté à la liste. La couleur verte finale reste à vérifier visuellement.
 - Aucun contenu de l’archive `SecurePaste-source.zip` n’a été examiné : elle n’a pas été retrouvée dans les emplacements recherchés. Ce nouveau fork ne prouve rien sur cet ancien prototype.
