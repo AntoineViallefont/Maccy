@@ -10,7 +10,10 @@
     "build_succeeded": true,
     "adhoc_runtime_signature_verified": true,
     "executable_sha256": "282a1e5e8e3ec7c1a4fe5689cf328044e7fb7fdd72243171de0df62219181da7",
-    "installed_path": "/Users/macavi/Applications/SecurePaste.app"
+    "installed_path": "/Users/macavi/Applications/SecurePaste.app",
+    "latest_UI_name_verified": "SecurePaste",
+    "latest_installed_settings_verified": true,
+    "latest_installed_accessibility_authorized": false
   },
   "manual_AX_tests": {
     "scope": "Pre-rename Release build; physical keyboard operated by Antoine; UI inspected by agent",
@@ -30,7 +33,8 @@
     "Latest renamed build physical keyboard recheck",
     "Application compatibility beyond TextEdit",
     "Light/dark menubar icon validation",
-    "Actual permission withdrawal and tap interruption scenarios"
+    "Actual permission withdrawal and tap interruption scenarios",
+    "Reauthorize the renamed and newly signed installed SecurePaste in macOS Accessibility"
   ],
   "logs_sha256": {
     "tests": "bcf56e4a756bd7fb2401ef573b1de14a170aa0b0cbb2eeae003facb0c0944bdd",
